@@ -1,0 +1,36 @@
+
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ชุดทั้งหมด • PWA Media Sets</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#111827">
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>ชุดทั้งหมด</h1>
+    <nav>
+      <a href="/" class="link">หน้าหลัก</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div id="all-sets" class="sets-grid"></div>
+    </section>
+  </main>
+
+  <footer class="foot">© PWA Media Sets</footer>
+
+  <script src="/sets.js" type="module"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PWA Media Sets</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#111827">
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>PWA Media Sets</h1>
+    <nav>
+      <a href="/" class="link">หน้าหลัก</a>
+      <a href="/sets.html" class="link">ชุดทั้งหมด</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>สร้างชุดใหม่</h2>
+      <form id="create-set-form" class="grid gap">
+        <label>ชื่อชุด (ไม่บังคับ)
+          <input type="text" name="title" placeholder="เช่น: งานโพสต์ 26 ก.ย.">
+        </label>
+        <button type="submit">+ สร้างชุด</button>
+      </form>
+      <p class="muted">หลังสร้างแล้ว จะพาไปหน้าอัพโหลดของชุดนั้น</p>
+    </section>
+
+    <section class="card">
+      <h2>ชุดล่าสุด</h2>
+      <div id="recent-sets" class="sets-grid"></div>
+    </section>
+  </main>
+
+  <footer class="foot">© PWA Media Sets</footer>
+
+  <script src="/app.js" type="module"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+</body>
+</html>

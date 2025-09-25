@@ -1,0 +1,16 @@
+
+name = "pwa-media-sets"
+pages_build_output_dir = "."
+
+[[ d1_databases ]]
+binding = "DB"              # used in functions code as env.DB
+database_name = "PWA_DB"
+database_id = "REPLACE_WITH_YOUR_D1_ID"
+
+[[ r2_buckets ]]
+binding = "MEDIA"           # used in functions code as env.MEDIA
+bucket_name = "pwa-media-bucket"  # create in Cloudflare R2
+
+[vars]
+# Optional: simple admin token for write routes (leave empty to disable)
+ADMIN_TOKEN = ""
