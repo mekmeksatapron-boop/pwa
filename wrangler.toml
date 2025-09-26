@@ -5,7 +5,7 @@ pages_build_output_dir = "."
 [[ d1_databases ]]
 binding = "DB"              # used in functions code as env.DB
 database_name = "pwa_db"
-database_id = "ab123cde-4567-890f-gh12-ijklmn345opq"
+database_id = "232fb2dd-a4ac-4ca2-af79-882944b252a8"
 [[ r2_buckets ]]
 binding = "MEDIA"           # used in functions code as env.MEDIA
 bucket_name = "pwa-media-bucket"  # create in Cloudflare R2
