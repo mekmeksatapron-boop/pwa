@@ -1,4 +1,31 @@
+function doGet(e){
+  // ... โค้ดของคุณตามเดิม ...
+  return json_({ ok:true, /* ... */ });
+}
 
+function doPost(e){
+  // ... โค้ดของคุณตามเดิม ...
+  return json_({ ok:true, /* ... */ });
+}
+
+/** ---- CORS helpers ---- */
+function doOptions(e){
+  // เรียกใช้โดยอัตโนมัติถ้ามี preflight
+  const out = ContentService.createTextOutput('');
+  out.setHeader('Access-Control-Allow-Origin', '*');
+  out.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+  out.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  return out;
+}
+
+function json_(o){
+  const out = ContentService.createTextOutput(JSON.stringify(o))
+    .setMimeType(ContentService.MimeType.JSON);
+  out.setHeader('Access-Control-Allow-Origin', '*');
+  out.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+  out.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  return out;
+}
 const recentEl = document.getElementById('recent-sets');
 const form = document.getElementById('create-set-form');
 
