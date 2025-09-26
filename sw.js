@@ -1,5 +1,5 @@
 
-const CACHE = 'pwa-media-v1';
+const CACHE = 'pwa-media-v2';
 const ASSETS = [
   '/', '/index.html', '/styles.css', '/app.js',
   '/sets.html','/sets.js','/set.html','/set.js',
